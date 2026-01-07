@@ -681,22 +681,22 @@
             </div>
             
             <button onclick="navigateTo('report')" 
-              class="w-full bg-red-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-red-700 transition-all shadow-lg">
+              class="w-full bg-red-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-red-700 transition-all shadow-lg text-sm sm:text-base">
               ⚠️ แจ้งเหตุไม่ปลอดภัย
             </button>
             
             <button onclick="showPasswordModal()" 
-              class="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-blue-700 transition-all shadow-lg">
-              🔐 จป.วิชาชีพ (Admin)
+              class="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-blue-700 transition-all shadow-lg text-sm sm:text-base">
+              🔐 สำหรับ จป.วิชาชีพ (Admin)
             </button>
             
             <button onclick="navigateTo('tracking')" 
-              class="w-full bg-orange-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-orange-700 transition-all shadow-lg">
-              📋 การติดตามแก้ไข
+              class="w-full bg-orange-600 text-white py-4 rounded-xl font-semibold mb-3 hover:bg-orange-700 transition-all shadow-lg text-sm sm:text-base">
+              📋 สำหรับ หัวหน้าหน่วยงาน (การติดตามแก้ไข)
             </button>
             
             <button onclick="navigateTo('dashboard')" 
-              class="w-full bg-purple-600 text-white py-4 rounded-xl font-semibold hover:bg-purple-700 transition-all shadow-lg">
+              class="w-full bg-purple-600 text-white py-4 rounded-xl font-semibold hover:bg-purple-700 transition-all shadow-lg text-sm sm:text-base">
               📊 Dashboard
             </button>
           </div>
@@ -735,9 +735,9 @@
           
           <div class="bg-white rounded-2xl shadow-xl p-8">
             <div class="text-center mb-6">
-              <img src="${LOGO_URL}" alt="Unsafe-Report Logo" class="w-24 h-24 mx-auto mb-3 object-contain">
-              <h1 class="text-3xl font-bold text-red-600 mb-2">Unsafe-Report</h1>
-              <h2 class="text-xl font-semibold text-gray-700">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</h2>
+              <img src="${LOGO_URL}" alt="Unsafe-Report Logo" class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 object-contain">
+              <h1 class="text-2xl sm:text-3xl font-bold text-red-600 mb-2">Unsafe-Report</h1>
+              <h2 class="text-sm sm:text-xl font-semibold text-gray-700">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</h2>
             </div>
             
             <form onsubmit="submitReport(event)" class="space-y-6">
@@ -853,24 +853,24 @@
       <div class="min-h-screen bg-blue-50 p-6">
         <div class="max-w-6xl mx-auto">
           <!-- Brand Header -->
-          <div class="bg-white rounded-xl shadow-md p-4 mb-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-              <img src="${LOGO_URL}" alt="Logo" class="w-12 h-12 object-contain">
+          <div class="bg-white rounded-xl shadow-md p-3 sm:p-4 mb-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <img src="${LOGO_URL}" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
               <div>
-                <h1 class="text-xl font-bold text-red-600">Unsafe-Report</h1>
-                <p class="text-sm text-gray-600">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
+                <h1 class="text-base sm:text-xl font-bold text-red-600">Unsafe-Report</h1>
+                <p class="text-xs sm:text-sm text-gray-600 hidden sm:block">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
               </div>
             </div>
-            <div class="flex gap-3">
-              <button onclick="showLineUserModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold">
+            <div class="flex gap-2 sm:gap-3">
+              <button onclick="showLineUserModal()" class="px-2 sm:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold text-xs sm:text-base">
                 💬 LINE Users
               </button>
-              <button onclick="logout()" class="text-red-600 hover:text-red-700 font-semibold">← ออก</button>
+              <button onclick="logout()" class="text-red-600 hover:text-red-700 font-semibold text-xs sm:text-base">← ออก</button>
             </div>
           </div>
           
-          <div class="bg-white rounded-2xl shadow-xl p-8 mb-6">
-            <h2 class="text-2xl font-bold mb-6">🔐 Admin - รายงานที่รอมอบหมาย</h2>
+          <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8 mb-6">
+            <h2 class="text-lg sm:text-2xl font-bold mb-6">🔐 Admin - รายงานที่รอมอบหมาย</h2>
             
             ${pending.length === 0 ? `
               <div class="text-center py-12 text-gray-500">
@@ -885,7 +885,7 @@
                     <p class="text-sm text-gray-600">ผู้รายงาน: ${report.reporterName || '-'}</p>
                     <p class="text-sm text-gray-600">หน่วยงาน: ${report.reporterUnit || '-'}</p>
                   </div>
-                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">
+                  <span class="px-2 sm:px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap">
                     รอมอบหมาย
                   </span>
                 </div>
@@ -1348,22 +1348,22 @@
     };
     
     return `
-      <div class="min-h-screen bg-orange-50 p-6">
+      <div class="min-h-screen bg-orange-50 p-4 sm:p-6">
         <div class="max-w-7xl mx-auto">
           <!-- Brand Header -->
-          <div class="bg-white rounded-xl shadow-md p-4 mb-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-              <img src="${LOGO_URL}" alt="Logo" class="w-12 h-12 object-contain">
+          <div class="bg-white rounded-xl shadow-md p-3 sm:p-4 mb-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <img src="${LOGO_URL}" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
               <div>
-                <h1 class="text-xl font-bold text-red-600">Unsafe-Report</h1>
-                <p class="text-sm text-gray-600">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
+                <h1 class="text-base sm:text-xl font-bold text-red-600">Unsafe-Report</h1>
+                <p class="text-xs sm:text-sm text-gray-600 hidden sm:block">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
               </div>
             </div>
-            <button onclick="navigateTo('home')" class="text-orange-600 hover:text-orange-700 font-semibold">← กลับหน้าหลัก</button>
+            <button onclick="navigateTo('home')" class="text-orange-600 hover:text-orange-700 font-semibold text-xs sm:text-base whitespace-nowrap">← กลับ</button>
           </div>
           
-          <div class="bg-white rounded-2xl shadow-xl p-8">
-            <h2 class="text-3xl font-bold mb-8 text-orange-700 text-center">📋 การติดตามแก้ไข - เลือกหน่วยงาน</h2>
+          <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8">
+            <h2 class="text-lg sm:text-3xl font-bold mb-6 sm:mb-8 text-orange-700 text-center">📋 การติดตามแก้ไข - เลือกหน่วยงาน</h2>
             
             ${categories.map(category => {
               const totalAssigned = category.units.reduce((sum, unit) => {
@@ -1447,21 +1447,21 @@
     );
     
     return `
-      <div class="min-h-screen bg-orange-50 p-6">
+      <div class="min-h-screen bg-orange-50 p-4 sm:p-6">
         <div class="max-w-7xl mx-auto">
           <!-- Brand Header -->
-          <div class="bg-white rounded-xl shadow-md p-4 mb-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-              <img src="${LOGO_URL}" alt="Logo" class="w-12 h-12 object-contain">
+          <div class="bg-white rounded-xl shadow-md p-3 sm:p-4 mb-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <img src="${LOGO_URL}" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
               <div>
-                <h1 class="text-xl font-bold text-red-600">Unsafe-Report</h1>
-                <p class="text-sm text-gray-600">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
+                <h1 class="text-base sm:text-xl font-bold text-red-600">Unsafe-Report</h1>
+                <p class="text-xs sm:text-sm text-gray-600 hidden sm:block">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
               </div>
             </div>
-            <button onclick="navigateTo('tracking')" class="text-orange-600 hover:text-orange-700 font-semibold">← กลับรายการหน่วยงาน</button>
+            <button onclick="navigateTo('tracking')" class="text-orange-600 hover:text-orange-700 font-semibold text-xs sm:text-base whitespace-nowrap">← กลับ</button>
           </div>
           
-          <div class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8">
             <div class="flex justify-between items-start mb-6">
               <div>
                 <h2 class="text-2xl font-bold text-orange-700">${unit.name}</h2>
@@ -1726,26 +1726,26 @@
     const rejected = filteredReports.filter(r => r.status === 'rejected').length;
     
     const html = `
-      <div class="min-h-screen bg-purple-50 p-6">
+      <div class="min-h-screen bg-purple-50 p-4 sm:p-6">
         <div class="max-w-6xl mx-auto">
           <!-- Brand Header -->
-          <div class="bg-white rounded-xl shadow-md p-4 mb-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-              <img src="${LOGO_URL}" alt="Logo" class="w-12 h-12 object-contain">
+          <div class="bg-white rounded-xl shadow-md p-3 sm:p-4 mb-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <img src="${LOGO_URL}" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
               <div>
-                <h1 class="text-xl font-bold text-red-600">Unsafe-Report</h1>
-                <p class="text-sm text-gray-600">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
+                <h1 class="text-base sm:text-xl font-bold text-red-600">Unsafe-Report</h1>
+                <p class="text-xs sm:text-sm text-gray-600 hidden sm:block">ระบบรายงานการปฏิบัติงานที่ไม่ปลอดภัย</p>
               </div>
             </div>
-            <button onclick="navigateTo('home')" class="text-purple-600 hover:text-purple-700 font-semibold">← กลับหน้าหลัก</button>
+            <button onclick="navigateTo('home')" class="text-purple-600 hover:text-purple-700 font-semibold text-xs sm:text-base whitespace-nowrap">← กลับ</button>
           </div>
           
-          <div class="bg-white rounded-2xl shadow-xl p-8">
-            <h2 class="text-2xl font-bold mb-6">📊 Dashboard - สถิติรวม</h2>
+          <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8">
+            <h2 class="text-lg sm:text-2xl font-bold mb-6">📊 Dashboard - สถิติรวม</h2>
             
             <!-- ตัวกรองช่วงเวลา -->
-            <div class="bg-gray-50 rounded-xl p-4 mb-6 border-2 border-gray-200">
-              <div class="flex items-center flex-wrap gap-3">
+            <div class="bg-gray-50 rounded-xl p-3 sm:p-4 mb-6 border-2 border-gray-200">
+              <div class="flex items-center flex-wrap gap-2 sm:gap-3">
                 <label class="font-bold text-gray-700">🗓️ ช่วงเวลา:</label>
                 <select id="periodFilter" onchange="handlePeriodChange(this.value)" 
                   class="border-2 border-gray-300 rounded-lg px-4 py-2 font-semibold focus:border-purple-500 focus:outline-none">
